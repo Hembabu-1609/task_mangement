@@ -1,24 +1,24 @@
-# 🗂️ Task Management App
+# Task Management App
 
-A full-stack **Task Management System** built using **React.js**, **Node.js (Express)**, and **MySQL**.  
+A full-stack Task Management System built using React.js, Node.js (Express), and MySQL.  
 Users can sign up, log in, and manage their personal tasks — add, edit, delete, and filter them by status or deadline.  
 Each user has their own task list (user-specific data isolation).
 
 ---
 
-## 🚀 Features
+## Features
 
-- 🔐 Secure **JWT Authentication**
-- 📝 Add, Edit, and Delete Tasks
-- 🧭 Filter Tasks by **Status** and **Deadline**
-- 👤 **User-specific Tasks** (each user sees only their tasks)
-- 🎨 Elegant UI with **Tailwind CSS**
-- ⚡ RESTful API with Express.js
-- 💾 Persistent Storage using **MySQL**
+- Secure JWT Authentication
+- Add, Edit, and Delete Tasks
+- Filter Tasks by Status and Deadline
+- User-specific Tasks (each user sees only their tasks)
+- Elegant UI with Tailwind CSS
+- RESTful API with Express.js
+- Persistent Storage using MySQL
 
 ---
 
-## 🧰 Tech Stack
+## Tech Stack
 
 ### Frontend
 - React.js  
@@ -33,7 +33,7 @@ Each user has their own task list (user-specific data isolation).
 
 ---
 
-## 📁 Folder Structure
+## Folder Structure
 
 project-root/
 │
@@ -72,14 +72,14 @@ project-root/
 
 ---
 
-## ⚙️ Installation & Setup
+##  Installation & Setup
 
-### 1️⃣ Clone the Repository
-```bash
-git clone https://github.com/yourusername/task_manager.git
-cd task-manager-app
+###  Clone the Repository
+bash
+git clone https://github.com/yourusername/task_management.git
+cd task-management-app
 
-2️⃣ Setup the Backend
+Setup the Backend
 cd backend
 npm install
 
@@ -92,21 +92,24 @@ DB_PASSWORD=yourpassword
 DB_NAME=taskdb
 
 Start the Backend Server
-npm start
+npm run dev
 
-3️⃣ Setup the Frontend
+Setup the Frontend
 cd ../frontend
 npm install
-npm run dev
+npm start
+
+Setup the Mobile
+flutter pub get
+flutter run
 
 
 MySQL Database Setup
-
 Run the following SQL commands to create your database and tables:
 
-CREATE DATABASE taskdb;
+CREATE DATABASE task_manager;
 
-USE taskdb;
+USE task_manager;
 
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -125,7 +128,7 @@ CREATE TABLE tasks (
   FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
-🔗 API Routes
+API Routes
 Auth Routes
 Method	Endpoint	Description
 POST	/api/auth/signup	Register a new user
@@ -136,7 +139,8 @@ GET	/api/tasks	Get all tasks for logged-in user
 POST	/api/tasks	Create a new task
 PUT	/api/tasks/:id	Update a specific task
 DELETE	/api/tasks/:id	Delete a specific task
-💻 Usage
+
+Usage
 
 Sign up or log in with your credentials.
 
